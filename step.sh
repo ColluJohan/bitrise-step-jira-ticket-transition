@@ -3,6 +3,8 @@ set -e
 # make pipelines' return status equal the last command to exit with a non-zero status, or zero if all commands exit successfully
 set -o pipefail
 
+echo "$TICKET_LIST"
+
 # --- Split lists into arrays ---
 IFS=$TICKET_DELIMITER read -ra TICKETS <<< "$TICKET_LIST"
 
